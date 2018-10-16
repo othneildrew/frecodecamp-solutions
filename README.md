@@ -2,8 +2,6 @@
 
 Here's my solutions to freeCodeCamp's Certification Projects. This is meant to give you an example of how a project may be completed - NOT provide you for a way to cheat.
 
-[View Live Demo](https://othneildrew.github.io/nature-gift-photography/)
-
 ## Follow Me On Other Social Platforms
 
 - [Facebook](https://facebook.com/othneildrew)
