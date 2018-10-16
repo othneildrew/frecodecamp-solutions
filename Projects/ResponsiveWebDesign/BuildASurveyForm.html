@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Build a Survey Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .container-fluid {
+      min-height: 100vh;
+      background-color: #1ABC9C;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1px;
+      box-shadow: 2px 2px 5px #34495E;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    #submit {
+      margin-top: 40px;
+      background-color: #F08080;
+      border: #FA8072;
+      font-weight: 700;
+      transition: .4s;
+    }
+
+    #submit:hover {
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- An example project created to earn freeCodeCamp's Responsive Web Design certification -->
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+
+        <h1 class="mt-5 text-center text-white" id="title">Learn To Code National Survey</h1>
+        <p class="text-center text-white" id="description">We conduct this survey annually to learn about people who want to learn about computer programming.</p>
+
+        <div class="card my-4">
+          <div class="card-body">
+
+            <form id="survey-form">
+              <div class="form-group">
+                <label for="name" id="name-label">Full name</label>
+                <input type="text" class="form-control" id="name" placeholder="John Coder Doe" required>
+            </div>
+                <div class="form-group">
+                  <label for="email" id="email-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="coderDoe@domain.com" required>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="number" id="number-label">Age you started learning to code?</label>
+                  <input type="number" class="form-control" id="number" placeholder="22" min="5" max="100">
+            </div>
+                  <div class="form-group">
+                    <label for="dropdown">What is your goal?</label>
+                    <select class="form-control" id="dropdown">
+                <option>Choose a goal from the list</option>
+                <option>Start a software company</option>
+                <option>Work at a start-up</option>
+                <option>Learn a new skill</option>
+                <option>Quit full-time job for more freedom</option>
+                <option>Learn to think differently</option>
+              </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <fieldset id="gender">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" name="gender" id="male" class="custom-control-input" value="male">
+                        <label class="custom-control-label" for="male">Guy</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" name="gender" id="female" class="custom-control-input" value="female">
+                        <label class="custom-control-label" for="female">Gyal</label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <label>Select the languages you know:</label>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="HTML-CSS" value="HTML-CSS">
+                      <label class="custom-control-label" for="HTML-CSS">HTML/CSS</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="JS" value="JS">
+                      <label class="custom-control-label" for="JS">JavScript</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="PHP" value="PHP">
+                      <label class="custom-control-label" for="PHP">PHP</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="PYT" value="PYT">
+                      <label class="custom-control-label" for="PYT">Python</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="GO" value="GO">
+                      <label class="custom-control-label" for="GO">Go</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="comments">What challenges do you expect to face while learning how to code?</label>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-block btn-lg mb-3 py-3" id="submit">Submit</button>
+            </form>
+
+          </div><!-- END card-body -->
+        </div><!-- END card -->
+
+      </div><!-- END col -->
+    </div><!-- END row -->
+
+  </div><!-- END container -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
