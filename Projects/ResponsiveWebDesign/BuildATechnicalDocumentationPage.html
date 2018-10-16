@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Build a Technical Documentation Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    #banner {
+      background-color: #03A9F4;
+      background: #00d2ff;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3a7bd5, #00d2ff);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    #navbar {
+      margin-bottom: 40px;
+      border-radius: 3px;
+      background-color: #F8F9F9;
+    }
+
+    #navbar header {
+      text-align: center;
+    }
+
+    code {
+      padding: 3px;
+      background-color: #17202A;
+      color: #58D68D;
+    }
+
+    section {
+      margin-bottom: 35px;
+      text-align: justify;
+    }
+
+    footer {
+      background-color: #ECF0F1;
+    }
+
+    @media (min-width: 768px) {
+      #navbar {
+        margin-bottom: 40px;
+        border-radius: 0px;
+        background-color: white;
+      }
+
+      #navbar header {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- This project was created to earn freeCodeCamp's Responsive Web Design Certification -->
+  <div class="mb-4 p-5 text-center text-white" id="banner">
+    <h1 class="font-weight-bold">Git Started Guide</h1>
+    <p class="lead">Quick start guide to learn the basics of Git version control</p>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-12 col-md-4">
+        <nav id="navbar" class="mt-3">
+          <header class="mb-3"><strong class="lead"><u>Git Documentation</u></strong></header>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#Create_A_New_Repository">Create A New Repository</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Checkout_A_Repository">Checkout A Repository</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Workflow">Workflow</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Add_And_Commit">Add And Commit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Pushing_Changes">Pushing Changes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Branching">Branching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Update_And_Merge">Update And Merge</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#More_Useful_Guides">More Useful Guides</a>
+            </li>
+          </ul>
+        </nav>
+      </div><!-- END col -->
+
+      <div class="col-12 col-md-8">
+        <main id="main-doc">
+
+          <section class="main-section" id="Create_A_New_Repository">
+            <header><h3>Create A New Repository</h3>
+            </header>
+            <p>To create a new repository, navigate to desired directory and perform the <code>git init</code> command.</p>
+          </section>
+
+          <section class="main-section" id="Checkout_A_Repository">
+            <header><h3>Checkout A Repository</h3>
+            </header>
+            <p>Create a working copy of local repository by running the command <code>git clone /path/to/repository</code> command.</p>
+            <p>When using a remote server, your command will be <code>git clone username@host:/path/to/repository</code></p>
+          </section>
+
+          <section class="main-section" id="Workflow">
+            <header><h3>Workflow</h3>
+            </header>
+            <p>Your local repository consists of three "tree" maintained by git. The first one is your <code>Working Directory</code> which holds the actual files. The second one is the <code>Index</code> which acts as a staging area and finally the
+              <code>HEAD</code> which points to the last commit you've made.</p>
+          </section>
+
+          <section class="main-section" id="Add_And_Commit">
+            <header><h3>Add And Commit</h3>
+            </header>
+            <p>You can propose changes (add it to the <strong>Index</strong>) using <code>git add &lt;filename&gt;</code> followed by <code>git add *</code>.
+
+              <p>This is the first step in the basic git workflow. To actually commit these changes use <code>git commit -m "Commit message"</code>.
+
+                <p>Now the file is committed to the <strong>HEAD</strong>, but not in your remote repository yet.</p>
+          </section>
+
+          <section class="main-section" id="Pushing_Changes">
+            <header><h3>Pushing Changes</h3>
+            </header>
+            <p>Your changes are now in the <strong>HEAD</strong> of your local working copy. To send those changes to your remote repository, execute <code>git push origin master</code></p>
+            <p>Change <em>master</em> to whatever branch you want to push your changes to.</p>
+            <p>If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with <code>git remote add origin &lt;server&gt;</code></p>
+            <p>Now you are able to push your changes to the selected remote server.</p>
+          </section>
+
+          <section class="main-section" id="Branching">
+            <header><h3>Branching</h3>
+            </header>
+            <p>Branches are used to develop features isolated from each other. The <em>master</em> branch is the "default" branch when you create a repository. Use other branches for development and merge them back to the master branch upon
+              completion.</p>
+            <p>Create a new branch name "feature_x" and switch to it using <code>git checkout -b feature_x</code></p>
+            <p>Switch back to master using <code>git checkout master</code></p>
+            <p>Delete a branch by using <code>git branch -d feature_x</code></p>
+            <p>Note that a branch is <em>not available to others</em> unless you push the branch to your remote repository using <code>git push origin &lt;branch&gt;</code></p>
+          </section>
+
+          <section class="main-section" id="Update_And_Merge">
+            <header><h3>Update And Merge</h3>
+            </header>
+            <p>To update your local repository to the newest commit, execute <code>git pull</code> to <em>fetch</em> and <em>merge</em> remote changes/</p>
+            <p>To merge another branch into your active branch use <code> git merge &lt;branch&gt;</code></p>
+            <p>Git will attempt to auto-merge changes. If there are <em>conflicts</em>, you are responsible to merge those conflicts manually by editing the files shown by git. After changing, you need to mark them as merged with git add
+                &lt;filename&gt; before merging changes. You can also preview them by using <code>git diff &lt;source_branch&gt; &lt;target_branch&gt;</code></p>
+          </section>
+
+          <section class="main-section" id="More_Useful_Guides">
+            <header><h3>More Useful Guides</h3>
+            </header>
+            <ul>
+              <li><a href="https://book.git-scm.com" target="_blank">Git Community Book</a></li>
+              <li><a href="http://progit.org/book" target="_blank">Pro Git</a></li>
+              <li><a href="http://think-like-a-git.net" target="_blank">Think like a git</a></li>
+              <li><a href="http://help.github.com" target="_blank">GitHub Help</a></li>
+              <li><a href="http://marklodato.github.com/visual-git-guide/index-en.html" target="_blank">A Visual Git Guide</a></li>
+            </ul>
+          </section>
+
+
+          <div class="mt-3 alert alert-warning" role="alert">
+            For more information on using GIT, visit <a href="https://rogerdudler.github.io/git-guide" target="_blank" class="alert-link"> https://rogerdudler.github.io/git-guide</a>.
+          </div>
+
+        </main>
+      </div><!-- END col -->
+
+    </div><!-- END row -->
+  </div><!-- END container -->
+
+  <footer class="py-1">
+    <p class="pt-3 text-center">Git - free and open source distributed version control system <br /> <strong>License:</strong> <a href="https://www.google.com/search?q=GNU+GPL&stick=H4sIAAAAAAAAAONgVuLQz9U3MDZPzgUABHTONwwAAAA&sa=X&ved=2ahUKEwj5sZm0-7bdAhXK34MKHRzvCtgQmxMoATAmegQIAxAv" target="_blank">GNU GPL</a>
+      and <a href="https://www.google.com/search?q=GNU+LGPL&stick=H4sIAAAAAAAAAONgVuLQz9U3MDZPzgUABHTONwwAAAA&sa=X&ved=2ahUKEwj5sZm0-7bdAhXK34MKHRzvCtgQmxMoAjAmegQIAxAw" target="_blank">GNU LGPL</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/14.2.1/smooth-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script>
+    $(function() {
+      $('#navbar').stick_in_parent();
+      var scroll = new SmoothScroll('a[href*="#"]');
+    });
+  </script>
+</body>
+
+</html>
